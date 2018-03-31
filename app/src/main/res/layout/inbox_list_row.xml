@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingEnd="20dp"
-        android:paddingLeft="72dp"
+        android:paddingLeft="60dp"
         android:paddingRight="20dp"
-        android:paddingStart="72dp">
+        android:paddingStart="60dp">
 
         <TextView
             android:id="@+id/tv_from"
