@@ -9,6 +9,12 @@
     <string name="action_attachment">Attachment</string>
     <string name="action_send">Send</string>
 
+    <!--Action Mode Menu Items-->
+    <string name="action_pinned">Pinned</string>
+    <string name="action_snooze">Snooze</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_done">Done</string>
+
     <string name="gmail_account_name">Sreemoyee Chowdhury</string>
     <string name="gmail_account_id">sreemoyee.chowdhury@gmail.com</string>
     <string name="inbox">Inbox</string>
