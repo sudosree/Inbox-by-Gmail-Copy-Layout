@@ -4,7 +4,8 @@
 
 ### Screenshots
 <br><br>
-<img width="300" src="Screenshot1.png" style="border:0px;margin:0px"/>
-<img width="300" src="Screenshot2.png" style="border:0px;margin:0px"/>
-<img width="300" src="Screenshot3.png" style="border:0px;margin:0px"/>
+<img width="300" src="Screenshot1.png" style="border:0px;margin:0px align="left"/>
+<img width="300" src="Screenshot2.png" style="border:0px;margin:0px" align="right"/>
+<br>
+<img width="300" src="Screenshot3.png" style="border:0px;margin:0px" align="left"/>
 <img width="300" src="Screenshot4.png" style="border:0px;margin:0px"/>
