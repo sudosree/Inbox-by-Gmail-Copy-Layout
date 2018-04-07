@@ -25,9 +25,9 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:lines="1"
+            android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_subject"
@@ -35,9 +35,9 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:lines="1"
+            android:textColor="@android:color/black"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_message"
@@ -45,16 +45,16 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:lines="1"
-            android:textSize="14sp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/gmail_item_letter"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:gravity="center"
         android:background="@drawable/bg_circle"
+        android:gravity="center"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 

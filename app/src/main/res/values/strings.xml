@@ -53,4 +53,21 @@
     <string-array name="gmail_list_id">
         <item>sreemoyee.chowdhury@gmail.com</item>
     </string-array>
+
+    <string name="snooze_message">Nothing in Snoozed</string>
+    <string name="done_message">Nothing in Done</string>
+    <string name="bin_message">Nothing in Bin</string>
+    <string name="drafts_message">Nothing in Drafts</string>
+    <string name="sent_message">Nothing in Sent</string>
+    <string name="reminders_message">Nothing in Reminders</string>
+    <string name="spam_message">Nothing in Spam</string>
+
+    <string name="snooze_sub_message">Anything that you Snooze will go here until it\'s time for it to return to the inbox.</string>
+    <string name="done_sub_message">Anything that you mark as Done will be stored safely here.</string>
+    <string name="bin_sub_message">Anything that you delete will be shown here.</string>
+    <string name="drafts_sub_message">Save a draft message and it will be shown here.</string>
+    <string name="sent_sub_message">Send a message and it will be shown here.</string>
+    <string name="reminders_sub_message">Create a Reminder and it will be shown here.</string>
+    <string name="spam_sub_message">Spam filters out unwanted messages. Move unwanted messages in Spam to improve its accuracy.</string>
+
 </resources>

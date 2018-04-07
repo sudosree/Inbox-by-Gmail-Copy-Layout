@@ -1,6 +1,7 @@
 package com.example.sreemoyeec662.inboxapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,11 +21,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -88,30 +91,52 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         switch (id) {
             case R.id.inbox:
+                configureToolbar(R.string.inbox, R.color.colorPrimary, R.color.colorPrimaryDark);
                 InboxFragment inboxFragment = new InboxFragment();
                 fragmentTransaction.replace(R.id.fragment_container, inboxFragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.snooze:
-                Toast.makeText(this, "Snoozed is clicked", Toast.LENGTH_SHORT).show();
+                configureToolbar(R.string.snoozed, R.color.colorPrimarySnooze, R.color.colorPrimaryDarkSnooze);
+                SnoozeFragment snoozeFragment = new SnoozeFragment();
+                fragmentTransaction.replace(R.id.fragment_container, snoozeFragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.done:
-                Toast.makeText(this, "Done is clicked", Toast.LENGTH_SHORT).show();
+                configureToolbar(R.string.done, R.color.colorPrimaryDone, R.color.colorPrimaryDarkDone);
+                DoneFragment doneFragment = new DoneFragment();
+                fragmentTransaction.replace(R.id.fragment_container, doneFragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.drafts:
-                Toast.makeText(this, "Drafts is clicked", Toast.LENGTH_SHORT).show();
+                configureToolbar(R.string.drafts, R.color.colorPrimaryBin, R.color.colorPrimaryDarkBin);
+                DraftsFragment draftsFragment = new DraftsFragment();
+                fragmentTransaction.replace(R.id.fragment_container, draftsFragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.sent:
-                Toast.makeText(this, "Sent is clicked", Toast.LENGTH_SHORT).show();
+                configureToolbar(R.string.sent, R.color.colorPrimaryBin, R.color.colorPrimaryDarkBin);
+                SentFragment sentFragment = new SentFragment();
+                fragmentTransaction.replace(R.id.fragment_container, sentFragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.reminders:
-                Toast.makeText(this, "Reminders is clicked", Toast.LENGTH_SHORT).show();
+                configureToolbar(R.string.reminders, R.color.colorPrimaryBin, R.color.colorPrimaryDarkBin);
+                RemindersFragment reminderFragment = new RemindersFragment();
+                fragmentTransaction.replace(R.id.fragment_container, reminderFragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.bin:
-                Toast.makeText(this, "Bin is clicked", Toast.LENGTH_SHORT).show();
+                configureToolbar(R.string.bin, R.color.colorPrimaryBin, R.color.colorPrimaryDarkBin);
+                BinFragment binFragment = new BinFragment();
+                fragmentTransaction.replace(R.id.fragment_container, binFragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.spam:
-                Toast.makeText(this, "Spam is clicked", Toast.LENGTH_SHORT).show();
+                configureToolbar(R.string.spam, R.color.colorPrimaryBin, R.color.colorPrimaryDarkBin);
+                SpamFragment spamFragment = new SpamFragment();
+                fragmentTransaction.replace(R.id.fragment_container, spamFragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.trips:
                 Toast.makeText(this, "Trips is clicked", Toast.LENGTH_SHORT).show();
@@ -144,5 +169,17 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void configureToolbar(int string, int primaryColor, int primaryDarkColor) {
+        toolbar.setTitle(string);
+        toolbar.setBackgroundColor(getResources().getColor(primaryColor));
+        setStatusBarColor(primaryDarkColor);
+    }
+
+    private void setStatusBarColor(int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(color));
+        }
     }
 }
